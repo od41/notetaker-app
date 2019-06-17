@@ -1,0 +1,44 @@
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Notetaker</title>
+</head>
+<body>
+    
+    <header>
+<!--    This is the header of the app      -->
+        <div class="logo">Notetaker</div>
+
+        <div class="button-group">
+            <button id="save" class="hidden">Save</button>     
+            <button id="delete" class="hidden minimal delete" onclick="deleteNoteEditor()">Delete</button>
+            <button id="close" class="hidden minimal">Close</button>
+
+            <button id="add-note">Add Note</button>
+        </div>
+    </header>
+    <div id="empty-state" class="empty-state">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 167 101.58"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#b0b4b6;}.cls-4{fill:#fff;}.cls-5{fill:#2b3b59;}</style><clipPath id="clip-path"><rect class="cls-1" width="167" height="102.18"/></clipPath></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g class="cls-2"><g id="Component_1_1" data-name="Component 1 1"><g id="Background"><path class="cls-3" d="M46,85a7,7,0,0,1,0-14H7A7,7,0,0,1,7,57H47a7,7,0,0,0,0-14H22a7,7,0,0,1,0-14H62a7,7,0,0,1,0-14h98a7,7,0,0,1,0,14H120a7,7,0,0,1,0,14h22a7,7,0,0,1,0,14H131.83C127,57,123,60.13,123,64s6,7,6,7a7,7,0,0,1,0,14ZM153,50a7,7,0,1,1,7,7A7,7,0,0,1,153,50Z"/></g><g id="Shape"><path class="cls-4" d="M113.33,93.11,54.77,100.3a4,4,0,0,1-4.46-3.49l-9-73.42A2,2,0,0,1,43,21.16h0l4.86-.55,3.93-.44,2.82-.32,52-5.85L116,81.84l.84,6.81A4,4,0,0,1,113.33,93.11Z"/><path class="cls-5" d="M54.28,101.58A5.26,5.26,0,0,1,49.07,97l-9-73.43a3.25,3.25,0,0,1,2.83-3.62l64.86-7.3,9.47,69.05.84,6.83a5.26,5.26,0,0,1-4.57,5.85l-58.56,7.19A4.68,4.68,0,0,1,54.28,101.58Zm51.32-86.2-62.41,7a.75.75,0,0,0-.66.83l9,73.43a2.75,2.75,0,0,0,3.06,2.4l58.56-7.19a2.76,2.76,0,0,0,2.4-3.07l-.84-6.8Zm7.73,77.73h0Z"/></g><g id="Rectangle"><path class="cls-3" d="M104.14,18.27l8.42,61.48.76,6.17a3.62,3.62,0,0,1-3.11,4h0L57.76,96.4a3.61,3.61,0,0,1-4-3.16h0L45.61,26.86a2,2,0,0,1,1.75-2.23l6.48-.8"/></g><g id="Rectangle-2"><path class="cls-4" d="M122.67,82.75h-59A2.75,2.75,0,0,1,60.92,80V4a2.75,2.75,0,0,1,2.75-2.75h45.56a2.76,2.76,0,0,1,1.94.8l13.45,13.44a2.72,2.72,0,0,1,.8,1.94V80A2.75,2.75,0,0,1,122.67,82.75Z"/><path class="cls-5" d="M63.67,2.5A1.5,1.5,0,0,0,62.17,4V80a1.5,1.5,0,0,0,1.5,1.5h59a1.5,1.5,0,0,0,1.5-1.5V17.43a1.47,1.47,0,0,0-.44-1.06L110.29,2.94a1.5,1.5,0,0,0-1.06-.44H63.67m0-2.5h45.56a4,4,0,0,1,2.83,1.17L125.5,14.61a4,4,0,0,1,1.17,2.82V80a4,4,0,0,1-4,4h-59a4,4,0,0,1-4-4V4A4,4,0,0,1,63.67,0Z"/></g><path class="cls-3" d="M99.08,18.25H71.67a1.25,1.25,0,0,1,0-2.5H99.08a1.25,1.25,0,0,1,0,2.5Z"/><path class="cls-3" d="M114.16,31H71.67a1.25,1.25,0,0,1,0-2.5h42.49a1.25,1.25,0,0,1,0,2.5Z"/><path class="cls-3" d="M114.16,43.75H71.67a1.25,1.25,0,0,1,0-2.5h42.49a1.25,1.25,0,0,1,0,2.5Z"/><path class="cls-3" d="M114.16,56.5H71.67a1.25,1.25,0,0,1,0-2.5h42.49a1.25,1.25,0,0,1,0,2.5Z"/><path class="cls-3" d="M99.08,69.25H71.67a1.25,1.25,0,0,1,0-2.5H99.08a1.25,1.25,0,0,1,0,2.5Z"/></g></g></g></g></svg>
+        <h3 class='title'>No notes yet</h3>
+        <p class='preview'>Add a new note</p>
+    </div>
+    <section id="notes">
+        
+        
+        
+    </section>
+    
+    <section id="note-editor" class="hidden">
+        <input class="note-title" id="title" name="title" type="text" placeholder="Title" />
+        <textarea class="note-body" id="body" placeholder="Type notes..." rows="15" cols="33"></textarea>
+    </section>
+
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
