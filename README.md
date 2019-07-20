@@ -1,2 +1,2 @@
-# vanhack-notetaker-app
+# notetaker-app
 The notetaker app for VanHacks testing
